@@ -27,6 +27,11 @@ static void update_text() {
   static char body_text[50];
   snprintf(body_text, sizeof(body_text), "%u", num_current_hole);
   text_layer_set_text(body_text_layer, body_text);
+
+  static char putt_text[50];
+  snprintf(putt_text, sizeof(putt_text), "%u", num_current_hole_putts);
+  text_layer_set_text(textlayer_putts, putt_text);  
+
   
   static char total_text[50];
   
@@ -227,6 +232,168 @@ static void subtract_from_score(ClickRecognizerRef recognizer,void *context){
   
 }
 
+// Add a putt to the hole
+static void add_putt_to_hole (ClickRecognizerRef recognizer, void *context) {
+  
+    switch(num_hole){
+    case 1:
+      num_hole1_putts++;
+      num_current_hole_putts = num_hole1_putts;
+    break;
+    case 2:
+      num_hole2_putts++;
+      num_current_hole_putts = num_hole2_putts;
+    break;
+    case 3:
+      num_hole3_putts++;
+      num_current_hole_putts = num_hole3_putts;
+    break;
+    case 4:
+      num_hole4_putts++;
+      num_current_hole_putts = num_hole4_putts;
+    break;
+    case 5:
+      num_hole5_putts++;
+      num_current_hole_putts = num_hole5_putts;
+    break;
+    case 6:
+      num_hole6_putts++;
+      num_current_hole_putts = num_hole6_putts;
+    break;
+    case 7:
+      num_hole7_putts++;
+      num_current_hole_putts = num_hole7_putts;
+    break;
+    case 8:
+      num_hole8_putts++;
+      num_current_hole_putts = num_hole8_putts;
+    break;
+    case 9:
+      num_hole9_putts++;
+      num_current_hole_putts = num_hole9_putts;
+    break;
+    case 10:
+      num_hole10_putts++;
+      num_current_hole_putts = num_hole10_putts;
+    break;
+    case 11:
+      num_hole11_putts++;
+      num_current_hole_putts = num_hole11_putts;
+    break;
+    case 12:
+      num_hole12_putts++;
+      num_current_hole_putts = num_hole12_putts;
+    break;
+    case 13:
+      num_hole13_putts++;
+      num_current_hole_putts = num_hole13_putts;
+    break;
+    case 14:
+      num_hole14_putts++;
+      num_current_hole_putts = num_hole14_putts;
+    break;
+    case 15:
+    num_hole15_putts++;
+      num_current_hole_putts = num_hole15_putts;
+    break;
+    case 16:
+      num_hole16_putts++;
+      num_current_hole_putts = num_hole16_putts;
+    break;
+    case 17:
+      num_hole17_putts++;
+      num_current_hole_putts = num_hole17_putts;
+    break;
+    case 18:
+      num_hole18_putts++;
+      num_current_hole_putts = num_hole18_putts;
+    break;
+  }
+  
+  update_text();
+}
+
+// Subtract a putt from the hole
+static void subtract_putt_to_hole (ClickRecognizerRef recognizer, void *context) {
+  
+    switch(num_hole){
+    case 1:
+      num_hole1_putts--;
+      num_current_hole_putts = num_hole1_putts;
+    break;
+    case 2:
+      num_hole2_putts--;
+      num_current_hole_putts = num_hole2_putts;
+    break;
+    case 3:
+      num_hole3_putts--;
+      num_current_hole_putts = num_hole3_putts;
+    break;
+    case 4:
+      num_hole4_putts--;
+      num_current_hole_putts = num_hole4_putts;
+    break;
+    case 5:
+      num_hole5_putts--;
+      num_current_hole_putts = num_hole5_putts;
+    break;
+    case 6:
+      num_hole6_putts--;
+      num_current_hole_putts = num_hole6_putts;
+    break;
+    case 7:
+      num_hole7_putts--;
+      num_current_hole_putts = num_hole7_putts;
+    break;
+    case 8:
+      num_hole8_putts--;
+      num_current_hole_putts = num_hole8_putts;
+    break;
+    case 9:
+      num_hole9_putts--;
+      num_current_hole_putts = num_hole9_putts;
+    break;
+    case 10:
+      num_hole10_putts--;
+      num_current_hole_putts = num_hole10_putts;
+    break;
+    case 11:
+      num_hole11_putts--;
+      num_current_hole_putts = num_hole11_putts;
+    break;
+    case 12:
+      num_hole12_putts--;
+      num_current_hole_putts = num_hole12_putts;
+    break;
+    case 13:
+      num_hole13_putts--;
+      num_current_hole_putts = num_hole13_putts;
+    break;
+    case 14:
+      num_hole14_putts--;
+      num_current_hole_putts = num_hole14_putts;
+    break;
+    case 15:
+    num_hole15_putts--;
+      num_current_hole_putts = num_hole15_putts;
+    break;
+    case 16:
+      num_hole16_putts--;
+      num_current_hole_putts = num_hole16_putts;
+    break;
+    case 17:
+      num_hole17_putts--;
+      num_current_hole_putts = num_hole17_putts;
+    break;
+    case 18:
+      num_hole18_putts--;
+      num_current_hole_putts = num_hole18_putts;
+    break;
+  }
+  
+  update_text();
+}
+
 // Skip back to the previous holes
 static void hole_backwards(ClickRecognizerRef recognizer,void *context){
   num_hole--;
@@ -239,57 +406,75 @@ static void hole_backwards(ClickRecognizerRef recognizer,void *context){
   switch(num_hole){
     case 1:
       num_current_hole = num_hole1;
+      num_current_hole_putts = num_hole1_putts;
     break;
     case 2:
       num_current_hole = num_hole2;
+      num_current_hole_putts = num_hole2_putts;
     break;
     case 3:
       num_current_hole = num_hole3;
+      num_current_hole_putts = num_hole3_putts;
     break;
     case 4:
       num_current_hole = num_hole4;
+      num_current_hole_putts = num_hole4_putts;
     break;
     case 5:
       num_current_hole = num_hole5;
+      num_current_hole_putts = num_hole5_putts;
     break;
     case 6:
       num_current_hole = num_hole6;
+      num_current_hole_putts = num_hole6_putts;
     break;
     case 7:
       num_current_hole = num_hole7;
+      num_current_hole_putts = num_hole7_putts;
     break;
     case 8:
       num_current_hole = num_hole8;
+      num_current_hole_putts = num_hole8_putts;
     break;
     case 9:
       num_current_hole = num_hole9;
+      num_current_hole_putts = num_hole9_putts;
     break;
     case 10:
       num_current_hole = num_hole10;
+      num_current_hole_putts = num_hole10_putts;
     break;
     case 11:
       num_current_hole = num_hole11;
+      num_current_hole_putts = num_hole11_putts;
     break;
     case 12:
       num_current_hole = num_hole12;
+      num_current_hole_putts = num_hole12_putts;
     break;
     case 13:
       num_current_hole = num_hole13;
+      num_current_hole_putts = num_hole12_putts;
     break;
     case 14:
       num_current_hole = num_hole14;
+      num_current_hole_putts = num_hole14_putts;
     break;
     case 15:
       num_current_hole = num_hole15;
+      num_current_hole_putts = num_hole15_putts;
     break;
     case 16:
       num_current_hole = num_hole16;
+      num_current_hole_putts = num_hole16_putts;
     break;
     case 17:
       num_current_hole = num_hole17;
+      num_current_hole_putts = num_hole17_putts;
     break;
     case 18:
       num_current_hole = num_hole18;
+      num_current_hole_putts = num_hole18_putts;
     break;
   }
  
@@ -310,57 +495,75 @@ static void hole_forward(ClickRecognizerRef recognizer,void *context){
   switch(num_hole){
     case 1:
       num_current_hole = num_hole1;
+      num_current_hole_putts = num_hole1_putts;
     break;
     case 2:
       num_current_hole = num_hole2;
+      num_current_hole_putts = num_hole2_putts;
     break;
     case 3:
       num_current_hole = num_hole3;
+      num_current_hole_putts = num_hole3_putts;
     break;
     case 4:
       num_current_hole = num_hole4;
+      num_current_hole_putts = num_hole4_putts;
     break;
     case 5:
       num_current_hole = num_hole5;
+      num_current_hole_putts = num_hole5_putts;
     break;
     case 6:
       num_current_hole = num_hole6;
+      num_current_hole_putts = num_hole6_putts;
     break;
     case 7:
       num_current_hole = num_hole7;
+      num_current_hole_putts = num_hole7_putts;
     break;
     case 8:
       num_current_hole = num_hole8;
+      num_current_hole_putts = num_hole8_putts;
     break;
     case 9:
       num_current_hole = num_hole9;
+      num_current_hole_putts = num_hole9_putts;
     break;
     case 10:
       num_current_hole = num_hole10;
+      num_current_hole_putts = num_hole10_putts;
     break;
     case 11:
       num_current_hole = num_hole11;
+      num_current_hole_putts = num_hole11_putts;
     break;
     case 12:
       num_current_hole = num_hole12;
+      num_current_hole_putts = num_hole12_putts;
     break;
     case 13:
       num_current_hole = num_hole13;
+      num_current_hole_putts = num_hole13_putts;
     break;
     case 14:
       num_current_hole = num_hole14;
+      num_current_hole_putts = num_hole14_putts;
     break;
     case 15:
       num_current_hole = num_hole15;
+      num_current_hole_putts = num_hole15_putts;
     break;
     case 16:
       num_current_hole = num_hole16;
+      num_current_hole_putts = num_hole16_putts;
     break;
     case 17:
       num_current_hole = num_hole17;
+      num_current_hole_putts = num_hole17_putts;
     break;
     case 18:
       num_current_hole = num_hole18;
+      num_current_hole_putts = num_hole18_putts;
     break;
   }
   
