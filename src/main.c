@@ -399,7 +399,9 @@ static void click_config_provider(void *context) {
   window_long_click_subscribe(BUTTON_ID_SELECT, repeat_interval_ms1, (ClickHandler) new_round, NULL);
   //window_long_click_subscribe(BUTTON_ID_DOWN, repeat_interval_ms1, (ClickHandler) course_overview, NULL);
   window_multi_click_subscribe(BUTTON_ID_SELECT, 2, 10, 0, true, hole_backwards);
-  
+
+  window_multi_click_subscribe(BUTTON_ID_UP, 2, 10, 0, true, (ClickHandler) add_putt_to_hole);
+  window_multi_click_subscribe(BUTTON_ID_DOWN, 2, 10, 0, true, (ClickHandler) subtract_putt_to_hole);
 }
 
 // set up the view's window and layers
@@ -458,7 +460,7 @@ static void window_load(Window *me) {
   putts_text_layer = text_layer_create(GRect(90, 60, 20, 49));
   text_layer_set_background_color(putts_text_layer, GColorWhite);
   text_layer_set_text_color(putts_text_layer, GColorJaegerGreen);
-  text_layer_set_text(putts_text_layer, "");
+  text_layer_set_text(putts_text_layer, "0");
   text_layer_set_text_alignment(putts_text_layer, GTextAlignmentCenter);
   text_layer_set_font(putts_text_layer, fonts_get_system_font(FONT_KEY_LECO_20_BOLD_NUMBERS));
   layer_add_child(layer, text_layer_get_layer(putts_text_layer));
