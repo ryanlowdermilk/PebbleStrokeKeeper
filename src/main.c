@@ -30,7 +30,7 @@ static void update_text() {
 
   static char putt_text[50];
   snprintf(putt_text, sizeof(putt_text), "%u", num_current_hole_putts);
-  text_layer_set_text(textlayer_putts, putt_text);  
+  text_layer_set_text(putts_text_layer, putt_text);  
 
   
   static char total_text[50];
