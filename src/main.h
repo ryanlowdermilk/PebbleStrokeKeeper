@@ -118,4 +118,25 @@ static int num_hole16 = NUM_HOLE16_DEFAULT;
 static int num_hole17 = NUM_HOLE17_DEFAULT;
 static int num_hole18 = NUM_HOLE18_DEFAULT;
 
+static int num_current_hole_putts = NUM_CURRENT_HOLE_PUTTS_DEFAULT;
+static int num_hole_putts = NUM_HOLE_PUTTS_DEFAULT;
+static int num_hole1_putts = NUM_HOLE1_PUTTS_DEFAULT;
+static int num_hole2_putts = NUM_HOLE2_PUTTS_DEFAULT;
+static int num_hole3_putts = NUM_HOLE3_PUTTS_DEFAULT;
+static int num_hole4_putts = NUM_HOLE4_PUTTS_DEFAULT;
+static int num_hole5_putts = NUM_HOLE5_PUTTS_DEFAULT;
+static int num_hole6_putts = NUM_HOLE6_PUTTS_DEFAULT;
+static int num_hole7_putts = NUM_HOLE7_PUTTS_DEFAULT;
+static int num_hole8_putts = NUM_HOLE8_PUTTS_DEFAULT;
+static int num_hole9_putts = NUM_HOLE9_PUTTS_DEFAULT;
+static int num_hole10_putts = NUM_HOLE10_PUTTS_DEFAULT;
+static int num_hole11_putts = NUM_HOLE11_PUTTS_DEFAULT;
+static int num_hole12_putts = NUM_HOLE12_PUTTS_DEFAULT;
+static int num_hole13_putts = NUM_HOLE13_PUTTS_DEFAULT;
+static int num_hole14_putts = NUM_HOLE14_PUTTS_DEFAULT;
+static int num_hole15_putts = NUM_HOLE15_PUTTS_DEFAULT;
+static int num_hole16_putts = NUM_HOLE16_PUTTS_DEFAULT;
+static int num_hole17_putts = NUM_HOLE17_PUTTS_DEFAULT;
+static int num_hole18_putts = NUM_HOLE18_PUTTS_DEFAULT;
+
 void window_push();
