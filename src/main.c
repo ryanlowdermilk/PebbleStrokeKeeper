@@ -314,7 +314,7 @@ static void add_putt_to_hole (ClickRecognizerRef recognizer, void *context) {
 }
 
 // Subtract a putt from the hole
-static void subtract_putt_to_hole (ClickRecognizerRef recognizer, void *context) {
+static void subtract_putt_from_hole (ClickRecognizerRef recognizer, void *context) {
   
     switch(num_hole){
     case 1:
@@ -604,7 +604,7 @@ static void click_config_provider(void *context) {
   window_multi_click_subscribe(BUTTON_ID_SELECT, 2, 10, 0, true, hole_backwards);
 
   window_multi_click_subscribe(BUTTON_ID_UP, 2, 10, 0, true, (ClickHandler) add_putt_to_hole);
-  window_multi_click_subscribe(BUTTON_ID_DOWN, 2, 10, 0, true, (ClickHandler) subtract_putt_to_hole);
+  window_multi_click_subscribe(BUTTON_ID_DOWN, 2, 10, 0, true, (ClickHandler) subtract_putt_from_hole);
 }
 
 // set up the view's window and layers
