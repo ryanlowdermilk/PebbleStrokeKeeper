@@ -17,6 +17,8 @@ static TextLayer *header_text_layer;
 static TextLayer *body_text_layer;
 static TextLayer *label_text_layer;
 static TextLayer *total_text_layer;
+static TextLayer *putts_text_layer;
+static TextLayer *teeaccuracy_text_layer;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   
@@ -421,7 +423,7 @@ static void window_load(Window *me) {
   text_layer_set_text_color(header_text_layer, GColorWhite);
   layer_add_child(layer, text_layer_get_layer(header_text_layer));
 
-  body_text_layer = text_layer_create(GRect(5, 60, 105, 46));
+  body_text_layer = text_layer_create(GRect(30, 60, 60, 49));
   text_layer_set_font(body_text_layer, fonts_get_system_font(FONT_KEY_LECO_38_BOLD_NUMBERS));
   text_layer_set_background_color(body_text_layer, GColorWhite);
   text_layer_set_text_alignment(body_text_layer, GTextAlignmentCenter);
@@ -443,6 +445,24 @@ static void window_load(Window *me) {
   text_layer_set_text(label_text_layer, "strokes on this hole");
   layer_add_child(layer, text_layer_get_layer(label_text_layer));
   
+  // add tee accuracy layer
+  teeaccuracy_text_layer = text_layer_create(GRect(5, 60, 25, 49));
+  text_layer_set_background_color(teeaccuracy_text_layer, GColorWhite);
+  text_layer_set_text_color(teeaccuracy_text_layer, GColorJaegerGreen);
+  text_layer_set_text(teeaccuracy_text_layer, "");
+  text_layer_set_text_alignment(teeaccuracy_text_layer, GTextAlignmentCenter);
+  text_layer_set_font(teeaccuracy_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
+  layer_add_child(layer, text_layer_get_layer(teeaccuracy_text_layer));
+  
+  // add putts layer
+  putts_text_layer = text_layer_create(GRect(90, 60, 20, 49));
+  text_layer_set_background_color(putts_text_layer, GColorWhite);
+  text_layer_set_text_color(putts_text_layer, GColorJaegerGreen);
+  text_layer_set_text(putts_text_layer, "");
+  text_layer_set_text_alignment(putts_text_layer, GTextAlignmentCenter);
+  text_layer_set_font(putts_text_layer, fonts_get_system_font(FONT_KEY_LECO_20_BOLD_NUMBERS));
+  layer_add_child(layer, text_layer_get_layer(putts_text_layer))
+
   printf("This is a rectangular display!");
   
 #elif defined(PBL_ROUND)
@@ -484,6 +504,14 @@ static void window_load(Window *me) {
   
   text_layer_set_background_color(label_text_layer, GColorClear);
   text_layer_set_text_color(label_text_layer, GColorJaegerGreen);
+
+  text_layer_set_background_color(putts_text_layer, GColorJaegerGreen);
+  text_layer_set_text_alignment(putts_text_layer, GTextAlignmentCenter);
+  text_layer_set_text_color(putts_text_layer, GColorWhite);
+
+  text_layer_set_background_color(teeaccuracy_text_layer, GColorJaegerGreen);
+  text_layer_set_text_alignment(teeaccuracy_text_layer, GTextAlignmentCenter);
+  text_layer_set_text_color(teeaccuracy_text_layer, GColorWhite);
   
   window_set_background_color(window, GColorMidnightGreen);
   
@@ -505,6 +533,14 @@ static void window_load(Window *me) {
   
   text_layer_set_background_color(label_text_layer, GColorClear);
   text_layer_set_text_color(label_text_layer, GColorWhite);
+
+  text_layer_set_background_color(putts_text_layer, GColorWhite);
+  text_layer_set_text_alignment(putts_text_layer, GTextAlignmentCenter);
+  text_layer_set_text_color(putts_text_layer, GColorBlack);
+  
+  text_layer_set_background_color(teeaccuracy_text_layer, GColorWhite);
+  text_layer_set_text_alignment(teeaccuracy_text_layer, GTextAlignmentCenter);
+  text_layer_set_text_color(teeaccuracy_text_layer, GColorBlack);
   
   window_set_background_color(window, GColorBlack);
   
@@ -515,8 +551,7 @@ static void window_load(Window *me) {
 
   // Set properties
   status_bar_layer_set_colors(s_status_bar, GColorMidnightGreen, GColorWhite);
-  status_bar_layer_set_separator_mode(s_status_bar, 
-                                            StatusBarLayerSeparatorModeDotted);
+  status_bar_layer_set_separator_mode(s_status_bar, StatusBarLayerSeparatorModeDotted);
 
   // Add to Window
   layer_add_child(layer, status_bar_layer_get_layer(s_status_bar));
@@ -530,6 +565,8 @@ static void window_unload(Window *window) {
   text_layer_destroy(body_text_layer);
   text_layer_destroy(total_text_layer);
   text_layer_destroy(label_text_layer);
+  text_layer_destroy(putts_text_layer);
+  text_layer_destroy(teeaccuracy_text_layer);  
 
   action_bar_layer_destroy(action_bar);
   
