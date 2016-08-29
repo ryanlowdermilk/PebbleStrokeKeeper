@@ -803,6 +803,28 @@ void window_save_scores(){
   persist_write_int(NUM_HOLE17_PKEY, num_hole17);
   persist_write_int(NUM_HOLE18_PKEY, num_hole18);
   
+  persist_write_int(NUM_CURRENT_HOLE_PUTTS_PKEY, num_current_hole_putts);
+  persist_write_int(NUM_HOLE_PUTTS_PKEY, num_hole_putts);
+  persist_write_int(NUM_HOLE1_PUTTS_PKEY, num_hole1_putts);
+  persist_write_int(NUM_HOLE2_PUTTS_PKEY, num_hole2_putts);
+  persist_write_int(NUM_HOLE3_PUTTS_PKEY, num_hole3_putts);
+  persist_write_int(NUM_HOLE4_PUTTS_PKEY, num_hole4_putts);
+  persist_write_int(NUM_HOLE5_PUTTS_PKEY, num_hole5_putts);
+  persist_write_int(NUM_HOLE6_PUTTS_PKEY, num_hole6_putts);
+  persist_write_int(NUM_HOLE7_PUTTS_PKEY, num_hole7_putts);
+  persist_write_int(NUM_HOLE8_PUTTS_PKEY, num_hole8_putts);
+  persist_write_int(NUM_HOLE9_PUTTS_PKEY, num_hole9_putts);
+  persist_write_int(NUM_HOLE10_PUTTS_PKEY, num_hole10_putts);
+  persist_write_int(NUM_HOLE11_PUTTS_PKEY, num_hole11_putts);
+  persist_write_int(NUM_HOLE12_PUTTS_PKEY, num_hole12_putts);
+  persist_write_int(NUM_HOLE13_PUTTS_PKEY, num_hole13_putts);
+  persist_write_int(NUM_HOLE14_PUTTS_PKEY, num_hole14_putts);
+  persist_write_int(NUM_HOLE15_PUTTS_PKEY, num_hole15_putts);
+  persist_write_int(NUM_HOLE16_PUTTS_PKEY, num_hole16_putts);
+  persist_write_int(NUM_HOLE17_PUTTS_PKEY, num_hole17_putts);
+  persist_write_int(NUM_HOLE18_PUTTS_PKEY, num_hole18_putts);
+
+  
 }
 
 void window_push(){
@@ -829,6 +851,29 @@ void window_push(){
   num_hole16 = persist_exists(NUM_HOLE16_PKEY) ? persist_read_int(NUM_HOLE16_PKEY) : NUM_HOLE16_DEFAULT;
   num_hole17 = persist_exists(NUM_HOLE17_PKEY) ? persist_read_int(NUM_HOLE17_PKEY) : NUM_HOLE17_DEFAULT;
   num_hole18 = persist_exists(NUM_HOLE18_PKEY) ? persist_read_int(NUM_HOLE18_PKEY) : NUM_HOLE18_DEFAULT;
+  
+  num_current_hole_putts = persist_exists(NUM_CURRENT_HOLE_PUTTS_PKEY) ? persist_read_int(NUM_CURRENT_HOLE_PUTTS_PKEY) : NUM_CURRENT_HOLE_PUTTS_DEFAULT;
+  num_hole_putts = persist_exists(NUM_HOLE_PUTTS_PKEY) ? persist_read_int(NUM_HOLE_PUTTS_PKEY) : NUM_HOLE_PUTTS_DEFAULT;
+  num_hole1_putts = persist_exists(NUM_HOLE1_PUTTS_PKEY) ? persist_read_int(NUM_HOLE1_PUTTS_PKEY) : NUM_HOLE1_PUTTS_DEFAULT;
+  num_hole2_putts = persist_exists(NUM_HOLE2_PUTTS_PKEY) ? persist_read_int(NUM_HOLE2_PUTTS_PKEY) : NUM_HOLE2_PUTTS_DEFAULT;
+  num_hole3_putts = persist_exists(NUM_HOLE3_PUTTS_PKEY) ? persist_read_int(NUM_HOLE3_PUTTS_PKEY) : NUM_HOLE3_PUTTS_DEFAULT;
+  num_hole4_putts = persist_exists(NUM_HOLE4_PUTTS_PKEY) ? persist_read_int(NUM_HOLE4_PUTTS_PKEY) : NUM_HOLE4_PUTTS_DEFAULT;
+  num_hole5_putts = persist_exists(NUM_HOLE5_PUTTS_PKEY) ? persist_read_int(NUM_HOLE5_PUTTS_PKEY) : NUM_HOLE5_PUTTS_DEFAULT;
+  num_hole6_putts = persist_exists(NUM_HOLE6_PUTTS_PKEY) ? persist_read_int(NUM_HOLE6_PUTTS_PKEY) : NUM_HOLE6_PUTTS_DEFAULT;
+  num_hole7_putts = persist_exists(NUM_HOLE7_PUTTS_PKEY) ? persist_read_int(NUM_HOLE7_PUTTS_PKEY) : NUM_HOLE7_PUTTS_DEFAULT;
+  num_hole8_putts = persist_exists(NUM_HOLE8_PUTTS_PKEY) ? persist_read_int(NUM_HOLE8_PUTTS_PKEY) : NUM_HOLE8_PUTTS_DEFAULT;
+  num_hole9_putts = persist_exists(NUM_HOLE9_PUTTS_PKEY) ? persist_read_int(NUM_HOLE9_PUTTS_PKEY) : NUM_HOLE9_PUTTS_DEFAULT;
+  num_hole10_putts = persist_exists(NUM_HOLE10_PUTTS_PKEY) ? persist_read_int(NUM_HOLE10_PUTTS_PKEY) : NUM_HOLE10_PUTTS_DEFAULT;
+  num_hole11_putts = persist_exists(NUM_HOLE11_PUTTS_PKEY) ? persist_read_int(NUM_HOLE11_PUTTS_PKEY) : NUM_HOLE11_PUTTS_DEFAULT;
+  num_hole12_putts = persist_exists(NUM_HOLE12_PUTTS_PKEY) ? persist_read_int(NUM_HOLE12_PUTTS_PKEY) : NUM_HOLE12_PUTTS_DEFAULT;
+  num_hole13_putts = persist_exists(NUM_HOLE13_PUTTS_PKEY) ? persist_read_int(NUM_HOLE13_PUTTS_PKEY) : NUM_HOLE13_PUTTS_DEFAULT;
+  num_hole14_putts = persist_exists(NUM_HOLE14_PUTTS_PKEY) ? persist_read_int(NUM_HOLE14_PUTTS_PKEY) : NUM_HOLE14_PUTTS_DEFAULT;
+  num_hole15_putts = persist_exists(NUM_HOLE15_PUTTS_PKEY) ? persist_read_int(NUM_HOLE15_PUTTS_PKEY) : NUM_HOLE15_PUTTS_DEFAULT;
+  num_hole16_putts = persist_exists(NUM_HOLE16_PUTTS_PKEY) ? persist_read_int(NUM_HOLE16_PUTTS_PKEY) : NUM_HOLE16_PUTTS_DEFAULT;
+  num_hole17_putts = persist_exists(NUM_HOLE17_PUTTS_PKEY) ? persist_read_int(NUM_HOLE17_PUTTS_PKEY) : NUM_HOLE17_PUTTS_DEFAULT;
+  num_hole18_putts = persist_exists(NUM_HOLE18_PUTTS_PKEY) ? persist_read_int(NUM_HOLE18_PUTTS_PKEY) : NUM_HOLE18_PUTTS_DEFAULT;
+
+  
   
   update_text();
 
@@ -870,6 +915,28 @@ static void init(void) {
   num_hole17 = persist_exists(NUM_HOLE17_PKEY) ? persist_read_int(NUM_HOLE17_PKEY) : NUM_HOLE17_DEFAULT;
   num_hole18 = persist_exists(NUM_HOLE18_PKEY) ? persist_read_int(NUM_HOLE18_PKEY) : NUM_HOLE18_DEFAULT;
   
+  num_current_hole_putts = persist_exists(NUM_CURRENT_HOLE_PUTTS_PKEY) ? persist_read_int(NUM_CURRENT_HOLE_PUTTS_PKEY) : NUM_CURRENT_HOLE_PUTTS_DEFAULT;
+  num_hole_putts = persist_exists(NUM_HOLE_PUTTS_PKEY) ? persist_read_int(NUM_HOLE_PUTTS_PKEY) : NUM_HOLE_PUTTS_DEFAULT;
+  num_hole1_putts = persist_exists(NUM_HOLE1_PUTTS_PKEY) ? persist_read_int(NUM_HOLE1_PUTTS_PKEY) : NUM_HOLE1_PUTTS_DEFAULT;
+  num_hole2_putts = persist_exists(NUM_HOLE2_PUTTS_PKEY) ? persist_read_int(NUM_HOLE2_PUTTS_PKEY) : NUM_HOLE2_PUTTS_DEFAULT;
+  num_hole3_putts = persist_exists(NUM_HOLE3_PUTTS_PKEY) ? persist_read_int(NUM_HOLE3_PUTTS_PKEY) : NUM_HOLE3_PUTTS_DEFAULT;
+  num_hole4_putts = persist_exists(NUM_HOLE4_PUTTS_PKEY) ? persist_read_int(NUM_HOLE4_PUTTS_PKEY) : NUM_HOLE4_PUTTS_DEFAULT;
+  num_hole5_putts = persist_exists(NUM_HOLE5_PUTTS_PKEY) ? persist_read_int(NUM_HOLE5_PUTTS_PKEY) : NUM_HOLE5_PUTTS_DEFAULT;
+  num_hole6_putts = persist_exists(NUM_HOLE6_PUTTS_PKEY) ? persist_read_int(NUM_HOLE6_PUTTS_PKEY) : NUM_HOLE6_PUTTS_DEFAULT;
+  num_hole7_putts = persist_exists(NUM_HOLE7_PUTTS_PKEY) ? persist_read_int(NUM_HOLE7_PUTTS_PKEY) : NUM_HOLE7_PUTTS_DEFAULT;
+  num_hole8_putts = persist_exists(NUM_HOLE8_PUTTS_PKEY) ? persist_read_int(NUM_HOLE8_PUTTS_PKEY) : NUM_HOLE8_PUTTS_DEFAULT;
+  num_hole9_putts = persist_exists(NUM_HOLE9_PUTTS_PKEY) ? persist_read_int(NUM_HOLE9_PUTTS_PKEY) : NUM_HOLE9_PUTTS_DEFAULT;
+  num_hole10_putts = persist_exists(NUM_HOLE10_PUTTS_PKEY) ? persist_read_int(NUM_HOLE10_PUTTS_PKEY) : NUM_HOLE10_PUTTS_DEFAULT;
+  num_hole11_putts = persist_exists(NUM_HOLE11_PUTTS_PKEY) ? persist_read_int(NUM_HOLE11_PUTTS_PKEY) : NUM_HOLE11_PUTTS_DEFAULT;
+  num_hole12_putts = persist_exists(NUM_HOLE12_PUTTS_PKEY) ? persist_read_int(NUM_HOLE12_PUTTS_PKEY) : NUM_HOLE12_PUTTS_DEFAULT;
+  num_hole13_putts = persist_exists(NUM_HOLE13_PUTTS_PKEY) ? persist_read_int(NUM_HOLE13_PUTTS_PKEY) : NUM_HOLE13_PUTTS_DEFAULT;
+  num_hole14_putts = persist_exists(NUM_HOLE14_PUTTS_PKEY) ? persist_read_int(NUM_HOLE14_PUTTS_PKEY) : NUM_HOLE14_PUTTS_DEFAULT;
+  num_hole15_putts = persist_exists(NUM_HOLE15_PUTTS_PKEY) ? persist_read_int(NUM_HOLE15_PUTTS_PKEY) : NUM_HOLE15_PUTTS_DEFAULT;
+  num_hole16_putts = persist_exists(NUM_HOLE16_PUTTS_PKEY) ? persist_read_int(NUM_HOLE16_PUTTS_PKEY) : NUM_HOLE16_PUTTS_DEFAULT;
+  num_hole17_putts = persist_exists(NUM_HOLE17_PUTTS_PKEY) ? persist_read_int(NUM_HOLE17_PUTTS_PKEY) : NUM_HOLE17_PUTTS_DEFAULT;
+  num_hole18_putts = persist_exists(NUM_HOLE18_PUTTS_PKEY) ? persist_read_int(NUM_HOLE18_PUTTS_PKEY) : NUM_HOLE18_PUTTS_DEFAULT;
+
+  
   window_stack_push(window,true);
 }
 
@@ -900,6 +967,27 @@ static void deinit(void){
   persist_write_int(NUM_HOLE17_PKEY, num_hole17);
   persist_write_int(NUM_HOLE18_PKEY, num_hole18);
 
+  persist_write_int(NUM_CURRENT_HOLE_PUTTS_PKEY, num_current_hole_putts);
+  persist_write_int(NUM_HOLE_PUTTS_PKEY, num_hole_putts);
+  persist_write_int(NUM_HOLE1_PUTTS_PKEY, num_hole1_putts);
+  persist_write_int(NUM_HOLE2_PUTTS_PKEY, num_hole2_putts);
+  persist_write_int(NUM_HOLE3_PUTTS_PKEY, num_hole3_putts);
+  persist_write_int(NUM_HOLE4_PUTTS_PKEY, num_hole4_putts);
+  persist_write_int(NUM_HOLE5_PUTTS_PKEY, num_hole5_putts);
+  persist_write_int(NUM_HOLE6_PUTTS_PKEY, num_hole6_putts);
+  persist_write_int(NUM_HOLE7_PUTTS_PKEY, num_hole7_putts);
+  persist_write_int(NUM_HOLE8_PUTTS_PKEY, num_hole8_putts);
+  persist_write_int(NUM_HOLE9_PUTTS_PKEY, num_hole9_putts);
+  persist_write_int(NUM_HOLE10_PUTTS_PKEY, num_hole10_putts);
+  persist_write_int(NUM_HOLE11_PUTTS_PKEY, num_hole11_putts);
+  persist_write_int(NUM_HOLE12_PUTTS_PKEY, num_hole12_putts);
+  persist_write_int(NUM_HOLE13_PUTTS_PKEY, num_hole13_putts);
+  persist_write_int(NUM_HOLE14_PUTTS_PKEY, num_hole14_putts);
+  persist_write_int(NUM_HOLE15_PUTTS_PKEY, num_hole15_putts);
+  persist_write_int(NUM_HOLE16_PUTTS_PKEY, num_hole16_putts);
+  persist_write_int(NUM_HOLE17_PUTTS_PKEY, num_hole17_putts);
+  persist_write_int(NUM_HOLE18_PUTTS_PKEY, num_hole18_putts);
+  
   gbitmap_destroy(action_icon_plus);
   gbitmap_destroy(action_icon_minus);
   gbitmap_destroy(action_icon_retry);

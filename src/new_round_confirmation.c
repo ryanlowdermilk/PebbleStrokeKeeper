@@ -35,7 +35,24 @@ static void reset_score(ClickRecognizerRef recognizer,void *context){
   num_hole16=0;
   num_hole17=0;
   num_hole18=0;
-  
+  num_hole1_putts=0;
+  num_hole2_putts=0;
+  num_hole3_putts=0;
+  num_hole4_putts=0;
+  num_hole5_putts=0;
+  num_hole6_putts=0;
+  num_hole7_putts=0;
+  num_hole8_putts=0;
+  num_hole9_putts=0;
+  num_hole10_putts=0;
+  num_hole11_putts=0;
+  num_hole12_putts=0;
+  num_hole13_putts=0;
+  num_hole14_putts=0;
+  num_hole15_putts=0;
+  num_hole16_putts=0;
+  num_hole17_putts=0;
+  num_hole18_putts=0;  
  
   // Save the count into persistent storage on app exit
   persist_write_int(NUM_CURRENT_HOLE_PKEY, num_current_hole);
@@ -60,6 +77,26 @@ static void reset_score(ClickRecognizerRef recognizer,void *context){
   persist_write_int(NUM_HOLE17_PKEY, num_hole17);
   persist_write_int(NUM_HOLE18_PKEY, num_hole18);
   
+  persist_write_int(NUM_CURRENT_HOLE_PUTTS_PKEY, num_current_hole_putts);
+  persist_write_int(NUM_HOLE_PUTTS_PKEY, num_hole_putts);
+  persist_write_int(NUM_HOLE1_PUTTS_PKEY, num_hole1_putts);
+  persist_write_int(NUM_HOLE2_PUTTS_PKEY, num_hole2_putts);
+  persist_write_int(NUM_HOLE3_PUTTS_PKEY, num_hole3_putts);
+  persist_write_int(NUM_HOLE4_PUTTS_PKEY, num_hole4_putts);
+  persist_write_int(NUM_HOLE5_PUTTS_PKEY, num_hole5_putts);
+  persist_write_int(NUM_HOLE6_PUTTS_PKEY, num_hole6_putts);
+  persist_write_int(NUM_HOLE7_PUTTS_PKEY, num_hole7_putts);
+  persist_write_int(NUM_HOLE8_PUTTS_PKEY, num_hole8_putts);
+  persist_write_int(NUM_HOLE9_PUTTS_PKEY, num_hole9_putts);
+  persist_write_int(NUM_HOLE10_PUTTS_PKEY, num_hole10_putts);
+  persist_write_int(NUM_HOLE11_PUTTS_PKEY, num_hole11_putts);
+  persist_write_int(NUM_HOLE12_PUTTS_PKEY, num_hole12_putts);
+  persist_write_int(NUM_HOLE13_PUTTS_PKEY, num_hole13_putts);
+  persist_write_int(NUM_HOLE14_PUTTS_PKEY, num_hole14_putts);
+  persist_write_int(NUM_HOLE15_PUTTS_PKEY, num_hole15_putts);
+  persist_write_int(NUM_HOLE16_PUTTS_PKEY, num_hole16_putts);
+  persist_write_int(NUM_HOLE17_PUTTS_PKEY, num_hole17_putts);
+  persist_write_int(NUM_HOLE18_PUTTS_PKEY, num_hole18_putts);
 
 
 
@@ -220,7 +257,24 @@ static void reset_score(ClickRecognizerRef recognizer,void *context){
   num_hole16=0;
   num_hole17=0;
   num_hole18=0;
-  
+  num_hole1_putts=0;
+  num_hole2_putts=0;
+  num_hole3_putts=0;
+  num_hole4_putts=0;
+  num_hole5_putts=0;
+  num_hole6_putts=0;
+  num_hole7_putts=0;
+  num_hole8_putts=0;
+  num_hole9_putts=0;
+  num_hole10_putts=0;
+  num_hole11_putts=0;
+  num_hole12_putts=0;
+  num_hole13_putts=0;
+  num_hole14_putts=0;
+  num_hole15_putts=0;
+  num_hole16_putts=0;
+  num_hole17_putts=0;
+  num_hole18_putts=0;
  
   // Save the count into persistent storage on app exit
   persist_write_int(NUM_CURRENT_HOLE_PKEY, num_current_hole);
@@ -245,6 +299,26 @@ static void reset_score(ClickRecognizerRef recognizer,void *context){
   persist_write_int(NUM_HOLE17_PKEY, num_hole17);
   persist_write_int(NUM_HOLE18_PKEY, num_hole18);
   
+  persist_write_int(NUM_CURRENT_HOLE_PUTTS_PKEY, num_current_hole_putts);
+  persist_write_int(NUM_HOLE_PUTTS_PKEY, num_hole_putts);
+  persist_write_int(NUM_HOLE1_PUTTS_PKEY, num_hole1_putts);
+  persist_write_int(NUM_HOLE2_PUTTS_PKEY, num_hole2_putts);
+  persist_write_int(NUM_HOLE3_PUTTS_PKEY, num_hole3_putts);
+  persist_write_int(NUM_HOLE4_PUTTS_PKEY, num_hole4_putts);
+  persist_write_int(NUM_HOLE5_PUTTS_PKEY, num_hole5_putts);
+  persist_write_int(NUM_HOLE6_PUTTS_PKEY, num_hole6_putts);
+  persist_write_int(NUM_HOLE7_PUTTS_PKEY, num_hole7_putts);
+  persist_write_int(NUM_HOLE8_PUTTS_PKEY, num_hole8_putts);
+  persist_write_int(NUM_HOLE9_PUTTS_PKEY, num_hole9_putts);
+  persist_write_int(NUM_HOLE10_PUTTS_PKEY, num_hole10_putts);
+  persist_write_int(NUM_HOLE11_PUTTS_PKEY, num_hole11_putts);
+  persist_write_int(NUM_HOLE12_PUTTS_PKEY, num_hole12_putts);
+  persist_write_int(NUM_HOLE13_PUTTS_PKEY, num_hole13_putts);
+  persist_write_int(NUM_HOLE14_PUTTS_PKEY, num_hole14_putts);
+  persist_write_int(NUM_HOLE15_PUTTS_PKEY, num_hole15_putts);
+  persist_write_int(NUM_HOLE16_PUTTS_PKEY, num_hole16_putts);
+  persist_write_int(NUM_HOLE17_PUTTS_PKEY, num_hole17_putts);
+  persist_write_int(NUM_HOLE18_PUTTS_PKEY, num_hole18_putts);
 
 
 
