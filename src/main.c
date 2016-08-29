@@ -650,15 +650,6 @@ static void window_load(Window *me) {
   text_layer_set_text(label_text_layer, "strokes on this hole");
   layer_add_child(layer, text_layer_get_layer(label_text_layer));
   
-  // add tee accuracy layer
-  teeaccuracy_text_layer = text_layer_create(GRect(5, 60, 25, 49));
-  text_layer_set_background_color(teeaccuracy_text_layer, GColorWhite);
-  text_layer_set_text_color(teeaccuracy_text_layer, GColorJaegerGreen);
-  text_layer_set_text(teeaccuracy_text_layer, "");
-  text_layer_set_text_alignment(teeaccuracy_text_layer, GTextAlignmentCenter);
-  text_layer_set_font(teeaccuracy_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
-  layer_add_child(layer, text_layer_get_layer(teeaccuracy_text_layer));
-  
   // add putts layer
   putts_text_layer = text_layer_create(GRect(90, 60, 20, 49));
   text_layer_set_background_color(putts_text_layer, GColorWhite);
