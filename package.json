@@ -4,15 +4,19 @@
     "keywords": [],
     "name": "stroke-keeper",
     "pebble": {
-        "capabilities": [
-            ""
-        ],
         "displayName": "Stroke Keeper",
         "enableMultiJS": false,
-        "messageKeys": {},
+        "messageKeys": [],
         "projectType": "native",
         "resources": {
             "media": [
+                {
+                    "file": "images/menuimage.png",
+                    "menuIcon": true,
+                    "name": "icon",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
                 {
                     "file": "images/warning.png",
                     "name": "WARNING",
@@ -54,12 +58,6 @@
                     "file": "images/action_icon_minus.png",
                     "name": "IMAGE_ACTION_ICON_MINUS",
                     "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/Untitled 63.png",
-                    "menuIcon": true,
-                    "name": "icon",
                     "type": "bitmap"
                 }
             ]
